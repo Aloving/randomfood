@@ -12,9 +12,11 @@ import { RecipesService } from './shared/services/recipes/recipes.service';
 import { AppComponent } from './components/app/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { RecipeComponent } from './components/recipe/recipe.component';
+import { LogoComponent } from './components/layout-components/logo/logo.component';
+import { SearchButtonComponent } from './components/layout-components/search-button/search-button.component';
 
 @NgModule({
-	declarations: [AppComponent, HomeComponent, RecipeComponent],
+	declarations: [AppComponent, HomeComponent, RecipeComponent, LogoComponent, SearchButtonComponent],
 	imports: [AppRoutingModule, BrowserModule, HttpModule],
 	providers: [RecipesService],
 	bootstrap: [AppComponent],

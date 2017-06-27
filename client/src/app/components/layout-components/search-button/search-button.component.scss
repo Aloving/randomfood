@@ -1,0 +1,30 @@
+@import '../../../shared/scss/helpers';
+
+.search-button{
+	background: #fff;
+	border: 0px;
+	outline: none;
+	padding: 10px 60px 10px 30px;
+	border-radius: 10px;
+	cursor: pointer;
+
+	&__svg,
+	&__text{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__svg{
+		width: 40px;
+		height: 40px;
+		svg{
+			fill: $mgc;
+		}
+	}
+
+	&__text{
+		color: $mgc;
+		font-size: 24px;
+		font-weight: 400;
+	}
+}
