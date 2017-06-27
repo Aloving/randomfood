@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
-
 @Component({
 	selector: 'app-recipe',
 	templateUrl: './recipe.component.html',
@@ -11,14 +10,11 @@ import 'rxjs/add/operator/switchMap';
 export class RecipeComponent implements OnInit {
 	//model
 
-	constructor(
-		private route: ActivatedRoute
-	) {}
+	constructor(private route: ActivatedRoute) {}
 
 	ngOnInit(): void {
 		this.getRecept();
 	}
 
-	getRecept(): void {
-	}
+	getRecept(): void {}
 }
