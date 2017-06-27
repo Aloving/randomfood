@@ -1,3 +1,11 @@
-<p>
-  recipe works!
-</p>
+<div *ngIf="recipe">
+	<p>{{recipe.name}}</p>
+	<p>{{recipe.image}}</p>
+	<p>{{recipe.complexity}}</p>
+	<ul>
+		<li *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}}{{ingredient.amount}}</li>
+	</ul>
+	<ol>
+		<li *ngFor="let instruction of recipe.instruction"><span *ngIf="instruction.image">{{instruction.image}}</span>{{instruction.step}}</li>
+	</ol>
+</div>
