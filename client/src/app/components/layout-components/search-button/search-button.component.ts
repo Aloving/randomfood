@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { RecipesService } from '../../../shared/services/recipes/recipes.service';
 
@@ -10,6 +10,8 @@ import { Recipe } from '../../../shared/models/recipe';
 	styleUrls: ['./search-button.component.scss'],
 })
 export class SearchButtonComponent {
+	@Input() buttonText: string;
+	
 	constructor(private recipesService: RecipesService, private router: Router) {}
 
 	onClick() {
