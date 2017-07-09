@@ -23,7 +23,9 @@ const Instruction = Schema({
 const Recipe = Schema({
   name: { type: String, required: true },
   image: { type: String, required: true },
-  complexity: { type: Number, required: true },
+  likes: { type: Number, requred: true },
+  dislikes: { type: Number, requred: true },
+  time: { type: String, requred: true },
   ingredients: [Ingredient],
   instruction: [Instruction],
 });

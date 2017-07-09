@@ -56,3 +56,7 @@ typings/
 
 # dotenv environment variables file
 .env
+
+#publick images
+server/public/images/recipes/
+server/scripts/startData/
