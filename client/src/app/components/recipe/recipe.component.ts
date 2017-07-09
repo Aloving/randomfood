@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/toPromise';
 
 import { RecipesService } from '../../shared/services/recipes/recipes.service';
 
@@ -14,8 +15,13 @@ import { Recipe } from '../../shared/models/recipe';
 })
 export class RecipeComponent implements OnInit {
 	//model
+<<<<<<< HEAD
 	public nextButtonText: string = 'Следующий рецепт';
 	public recipe: Recipe;
+=======
+	private recipe: Recipe;
+	private nextButtonText: string = 'Следующий рецепт';
+>>>>>>> 7aa30f3303ed55ee80e5947f1185032c23c6a707
 	private fetching: boolean = true;
 
 	constructor(
@@ -38,7 +44,11 @@ export class RecipeComponent implements OnInit {
 	}
 
 	onLoad() {
+<<<<<<< HEAD
 		setTimeout(() => this.dispatchFetching(), 100);
+=======
+		setTimeout(() => this.dispatchFetching(), 0);
+>>>>>>> 7aa30f3303ed55ee80e5947f1185032c23c6a707
 	}
 
 	getRecept(): void {
