@@ -8,6 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
+    "production": "concurrently \"mongod --dbpath ~/database\" \"npm run serverProduction\"",
+    "serverProduction": "NODE_ENV=production node ./server/bin/www",
     "serverstart": "concurrently \"mongod\" \"node ./server/bin/www\""
   },
   "author": "",
