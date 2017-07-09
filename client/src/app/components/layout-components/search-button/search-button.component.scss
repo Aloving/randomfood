@@ -1,12 +1,17 @@
 @import '../../../shared/scss/helpers';
 
 .search-button{
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 	background: #fff;
 	border: 0px;
 	outline: none;
-	padding: 10px 60px 10px 30px;
+	padding: 10px 46px 10px 30px;
 	border-radius: 10px;
 	cursor: pointer;
+	transition: .2s;
+	&:focus{
+		box-shadow: 0px 0px 0px rgba(0,0,0,.4);
+	}
 
 	&__svg,
 	&__text{
@@ -15,8 +20,8 @@
 	}
 
 	&__svg{
-		width: 40px;
-		height: 40px;
+		width: 34px;
+		height: 34px;
 		svg{
 			fill: $mgc;
 		}
@@ -24,7 +29,7 @@
 
 	&__text{
 		color: $mgc;
-		font-size: 24px;
+		font-size: 22px;
 		font-weight: 400;
 	}
 }

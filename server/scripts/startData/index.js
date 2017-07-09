@@ -4,6 +4,7 @@ const data = require('./data.json');
 
 function createRecepts(){
   return Promise.each(data, (item) => {
+    console.log(item);
     const saveItem = new mongoose.models.Recipe(item);
     return saveItem.save();
   });
