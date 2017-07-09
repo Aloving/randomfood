@@ -14,8 +14,8 @@ import { Recipe } from '../../shared/models/recipe';
 })
 export class RecipeComponent implements OnInit {
 	//model
-	private recipe: Recipe;
-	private nextButtonText: string = 'Следующий рецепт';
+	public nextButtonText: string = 'Следующий рецепт';
+	public recipe: Recipe;
 	private fetching: boolean = true;
 
 	constructor(
@@ -44,7 +44,6 @@ export class RecipeComponent implements OnInit {
 	getRecept(): void {
 		this.route.params
 			.switchMap((params: Params) => {
-				console.log(1);
 				return this.recipesService.getReciept(+params['id']);
 			})
 			.subscribe(recipe => (this.recipe = recipe));
